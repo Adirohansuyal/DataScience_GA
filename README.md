@@ -16,5 +16,5 @@ It demonstrates **continuous deployment with GitHub Actions** to automatically a
 
 Clone the repository:
 ```sh
-git clone https://github.com/YOUR_USERNAME/streamlit-data-science-app.git
+git clone https://github.com/Adirohansuyal/streamlit-data-science-app.git
 cd streamlit-data-science-app

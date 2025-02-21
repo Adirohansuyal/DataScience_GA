@@ -15,8 +15,8 @@ def load_data():
 df = load_data()
 
 # Title & Dataset Preview
-st.title("🌺 Iris Flower Classification")
-st.write("A simple ML model trained on the Iris dataset.")
+st.title("🌺 Iris Flower Classification by Aditya Suyal")
+st.write("A simple ML model trained on the Iris dataset demonstrating Github Actions for future updates.")
 
 st.write("### Sample Data")
 st.dataframe(df.head())

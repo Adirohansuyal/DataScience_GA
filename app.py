@@ -35,7 +35,7 @@ accuracy = accuracy_score(y_test, y_pred)
 st.write(f"### Model Accuracy: **{accuracy:.2f}**")
 
 # User Input for Prediction
-st.sidebar.header("🌟 Predict New Flower")
+st.sidebar.header("🌟 Predict New Flower 🌸 ")
 sepal_length = st.sidebar.slider("Sepal Length", float(df["sepal_length"].min()), float(df["sepal_length"].max()))
 sepal_width = st.sidebar.slider("Sepal Width", float(df["sepal_width"].min()), float(df["sepal_width"].max()))
 petal_length = st.sidebar.slider("Petal Length", float(df["petal_length"].min()), float(df["petal_length"].max()))

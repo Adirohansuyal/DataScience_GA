@@ -37,8 +37,8 @@ def train_model(model_type="Random Forest", n_estimators=100, kernel="rbf"):
     return model, accuracy
 
 # App Layout
-st.title("🌺 Iris Flower Classification")
-st.write("A Streamlit app demonstrating GitHub Actions with automated ML updates.")
+st.title("🌺 Iris Flower Classification Model By Aditya Suyal")
+st.write("A Streamlit app demonstrating GitHub Actions with automated feature updates (CI/CD).")
 
 # Sidebar Navigation
 st.sidebar.header("🔍 Select Options")
@@ -51,14 +51,13 @@ if menu == "📊 Data Overview":
     
     # Data Visualization
     st.subheader("📊 Feature Distribution")
-    fig, ax = plt.subplots()
-    df.hist(ax=ax, figsize=(8, 6), bins=15)
+    fig, ax = plt.subplots(figsize=(8, 6))
+    df.hist(ax=ax, bins=15)
     st.pyplot(fig)
     
     st.subheader("📌 Feature Relationships")
-    fig, ax = plt.subplots()
-    sns.pairplot(df, hue="species")
-    st.pyplot(fig)
+    pairplot_fig = sns.pairplot(df, hue="species")
+    st.pyplot(pairplot_fig)
 
 # 2️⃣ Model Training
 elif menu == "🔬 Model Training":
@@ -76,7 +75,6 @@ elif menu == "🔬 Model Training":
     
     st.write(f"### Model Accuracy: **{accuracy:.2f}**")
 
-# 3️⃣ Prediction
 # 3️⃣ Prediction
 elif menu == "🧠 Prediction":
     st.subheader("🌟 Predict New Flower 🌸")
@@ -99,3 +97,27 @@ elif menu == "🧠 Prediction":
         st.success(f"Predicted Species: **{prediction[0]}**")
         st.write(f"Confidence: **{np.max(probabilities) * 100:.2f}%**")
 
+# Footer Section
+footer = """
+<style>
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #f1f1f1;
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: bold;
+        color: black;
+    }
+    footer {visibility: hidden;} /* Hide default Streamlit footer */
+</style>
+
+<div class="footer">
+    Designed by Aditya Suyal (Not a proper development software. Trial Only!) | 💡 
+    <a href="https://github.com/Adirohansuyal/DataScience_GA" target="_blank">View on GitHub</a>
+</div>
+"""
+
+st.markdown(footer, unsafe_allow_html=True)

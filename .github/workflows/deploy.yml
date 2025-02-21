@@ -1,0 +1,32 @@
+name: Deploy Streamlit App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run basic test
+        run: python -c "import pandas as pd; df = pd.read_csv('data/iris.csv'); print(df.shape)"
+
+      - name: Deploy to Streamlit
+        uses: streamlit/action-deploy@v1
+        with:
+          email: ${{ secrets.STREAMLIT_EMAIL }}
+          password: ${{ secrets.STREAMLIT_PASSWORD }}
+          repository: "YOUR_GITHUB_USERNAME/streamlit-data-science-app"

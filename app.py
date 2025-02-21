@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Title
-st.title("📊 Data Science App with GitHub Actions")
+st.title("📊 Data Science App with GitHub Actions by Aditya")
 
 # Load dataset
 @st.cache_data

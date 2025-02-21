@@ -37,7 +37,7 @@ def train_model(model_type="Random Forest", n_estimators=100, kernel="rbf"):
     return model, accuracy
 
 # App Layout
-st.title("🌺 Iris Flower Classification Model By Aditya Suyal")
+st.title("🌺 Iris Flower Classification Model")
 st.write("A Streamlit app demonstrating GitHub Actions with automated feature updates (CI/CD).")
 
 # Sidebar Navigation

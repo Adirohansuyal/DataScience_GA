@@ -15,7 +15,7 @@ def load_data():
 df = load_data()
 
 # Title & Dataset Preview
-st.title("🌺 Iris Flower Classification")
+st.title("🌺 Iris Flower Classification by Nishu Suyal")
 st.write("A simple ML model trained on the Iris dataset demonstrating Github Actions for future updates.")
 
 st.write("### Sample Data")

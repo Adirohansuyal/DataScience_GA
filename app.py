@@ -77,20 +77,25 @@ elif menu == "🔬 Model Training":
     st.write(f"### Model Accuracy: **{accuracy:.2f}**")
 
 # 3️⃣ Prediction
+# 3️⃣ Prediction
 elif menu == "🧠 Prediction":
-    st.sidebar.subheader("🌟 Predict New Flower 🌸")
-    
+    st.subheader("🌟 Predict New Flower 🌸")
+
+    # Train a default model if not already trained
+    model, _ = train_model()  # Default: Random Forest with 100 estimators
+
     # Input Fields
-    sepal_length = st.sidebar.slider("Sepal Length", float(df["sepal_length"].min()), float(df["sepal_length"].max()))
-    sepal_width = st.sidebar.slider("Sepal Width", float(df["sepal_width"].min()), float(df["sepal_width"].max()))
-    petal_length = st.sidebar.slider("Petal Length", float(df["petal_length"].min()), float(df["petal_length"].max()))
-    petal_width = st.sidebar.slider("Petal Width", float(df["petal_width"].min()), float(df["petal_width"].max()))
+    sepal_length = st.slider("Sepal Length", float(df["sepal_length"].min()), float(df["sepal_length"].max()))
+    sepal_width = st.slider("Sepal Width", float(df["sepal_width"].min()), float(df["sepal_width"].max()))
+    petal_length = st.slider("Petal Length", float(df["petal_length"].min()), float(df["petal_length"].max()))
+    petal_width = st.slider("Petal Width", float(df["petal_width"].min()), float(df["petal_width"].max()))
 
     # Prediction
-    if st.sidebar.button("Predict"):
+    if st.button("Predict"):
         input_data = np.array([[sepal_length, sepal_width, petal_length, petal_width]])
         prediction = model.predict(input_data)
         probabilities = model.predict_proba(input_data)
 
-        st.sidebar.success(f"Predicted Species: **{prediction[0]}**")
-        st.sidebar.write(f"Confidence: **{np.max(probabilities) * 100:.2f}%**")
+        st.success(f"Predicted Species: **{prediction[0]}**")
+        st.write(f"Confidence: **{np.max(probabilities) * 100:.2f}%**")
+

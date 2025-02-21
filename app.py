@@ -8,7 +8,7 @@ from sklearn.metrics import accuracy_score
 # Load Dataset
 @st.cache_data
 def load_data():
-    url = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv"
+    url = "data/iris.csv"
     df = pd.read_csv(url)
     return df
 

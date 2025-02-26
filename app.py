@@ -27,14 +27,7 @@ page_bg = """
         padding: 20px;
         color: white;
     }
-    .custom-title {
-        font-family: 'Courier New', monospace; /* Change to any font */
-        font-size: 36px;
-        font-weight: bold;
-        color: #FFD700; /* Gold color */
-        text-align: center;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
+    
 </style>
 """
 

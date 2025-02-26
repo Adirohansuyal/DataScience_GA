@@ -15,7 +15,7 @@ import streamlit as st
 page_bg = """
 <style>
     body {
-        background: linear-gradient(to right, #0F2027, #203A43, #2C5364); /* Gradient shades of royal blue */
+        background: linear-gradient(to right, #8B0000, #B22222, #DC143C); /* Dark red to crimson gradient */
         background-size: cover;
         background-position: center;
         background-attachment: fixed;

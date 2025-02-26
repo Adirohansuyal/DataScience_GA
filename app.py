@@ -15,15 +15,16 @@ import streamlit as st
 page_bg = """
 <style>
     body {
-        background: linear-gradient(to right, #8B0000, #B22222, #DC143C); /* Dark red to crimson gradient */
+        background: url('https://source.unsplash.com/1600x900/?stars,night-sky,galaxy');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
     }
     .stApp {
-        background-color: rgba(255, 255, 255, 0.1); /* Light overlay for readability */
+        background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for readability */
         border-radius: 10px;
         padding: 20px;
+        color: white;
     }
 </style>
 """

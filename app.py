@@ -8,6 +8,26 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.svm import SVC
 
+# Custom CSS for Flowery Background
+page_bg = """
+<style>
+    body {
+        background-image: url('https://www.wallpaperflare.com/static/965/81/413/flower-background-vintage-style-pink-wallpaper.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    .stApp {
+        background-color: rgba(255, 255, 255, 0.8); /* Light overlay for readability */
+        border-radius: 10px;
+        padding: 10px;
+    }
+</style>
+"""
+
+st.markdown(page_bg, unsafe_allow_html=True)
+
+
 # Load Dataset
 @st.cache_data
 def load_data():

@@ -68,7 +68,7 @@ st.sidebar.header("🔍 Select Options below")
 menu = st.sidebar.radio("Go to", ["📊 Data Overview", "🔬 Model Training", "🧠 Prediction"])
 
 # 1️⃣ Data Overview
-if menu == "📊 Data Overview :":
+if menu == "📊 Data Overview":
     st.subheader("🔍 Data Overview")
     st.dataframe(df.head())
     

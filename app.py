@@ -9,18 +9,21 @@ from sklearn.metrics import accuracy_score
 from sklearn.svm import SVC
 
 # Custom CSS for Flowery Background
+import streamlit as st
+
+# Custom CSS for Gradient Royal Blue Background
 page_bg = """
 <style>
     body {
-        background-image: url('https://www.wallpaperflare.com/static/965/81/413/flower-background-vintage-style-pink-wallpaper.jpg');
+        background: linear-gradient(to right, #0F2027, #203A43, #2C5364); /* Gradient shades of royal blue */
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
     }
     .stApp {
-        background-color: rgba(255, 255, 255, 0.8); /* Light overlay for readability */
+        background-color: rgba(255, 255, 255, 0.1); /* Light overlay for readability */
         border-radius: 10px;
-        padding: 10px;
+        padding: 20px;
     }
 </style>
 """

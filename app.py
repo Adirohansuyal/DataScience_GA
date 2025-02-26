@@ -14,6 +14,7 @@ import streamlit as st
 # Custom CSS for Gradient Royal Blue Background
 page_bg = """
 <style>
+
     body {
         background: url('https://source.unsplash.com/1600x900/?stars,night-sky,galaxy');
         background-size: cover;
@@ -25,6 +26,14 @@ page_bg = """
         border-radius: 10px;
         padding: 20px;
         color: white;
+    }
+    .custom-title {
+        font-family: 'Courier New', monospace; /* Change to any font */
+        font-size: 36px;
+        font-weight: bold;
+        color: #FFD700; /* Gold color */
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 </style>
 """
